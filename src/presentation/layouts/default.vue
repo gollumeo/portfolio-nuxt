@@ -4,7 +4,7 @@
       Pierre "Golluméo" Mauriello - Bienvenue dans ma Communauté 🫡
     </header>
     <main class="flex-grow">
-        <slot />
+      <slot />
     </main>
     <footer class="p-4 bg-slate-800">
       <p>&copy; {{ new Date().getFullYear() }} Pierre "Golluméo" Mauriello</p>

@@ -1,31 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    compatibilityDate: '2024-11-01',
-    devtools: {enabled: true},
 
-    modules: [
-        '@nuxtjs/tailwindcss',
-        '@pinia/nuxt',
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt', '@nuxtjs/i18n',
+  ],
 
+  pages: true,
 
-        '@nuxtjs/i18n'
-    ],
+  components: {
+    dirs: ['presentation/components'],
+  },
 
-    srcDir: 'src/',
+  imports: {
+    dirs: ['presentation/composables', '/stores'],
+  },
+  devtools: { enabled: true },
 
-    components: {
-        dirs: ['presentation/components']
-    },
+  css: ['/presentation/assets/main.css'],
+  dir: {
+    pages: 'presentation/pages',
+    layouts: 'presentation/layouts',
+  },
 
-    imports: {
-        dirs: ['presentation/composables', '/stores']
-    },
-
-    pages: true,
-    dir: {
-        pages: 'presentation/pages',
-        layouts: 'presentation/layouts'
-    },
-
-    css: ['/presentation/assets/main.css']
-});
+  srcDir: 'src/', compatibilityDate: '2024-11-01',
+})
