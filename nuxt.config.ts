@@ -2,14 +2,27 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
+
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt'
+  ],
+
   srcDir: 'src/',
+
   components: {
-    dirs: ['presentation/components',],
+    dirs: ['presentation/components']
   },
+
   imports: {
-    dirs: ['src/composables', 'src/stores']
+    dirs: ['presentation/composables', '/stores']
   },
+
   pages: true,
-  css: ['@/presentation/assets/main.css'],
+  dir: {
+    pages: 'presentation/pages',
+    layouts: 'presentation/layouts'
+  },
+
+  css: ['/presentation/assets/main.css']
 });
