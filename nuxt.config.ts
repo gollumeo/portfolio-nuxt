@@ -4,9 +4,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
   srcDir: 'src/',
-  components: true,
+  components: {
+    dirs: ['presentation/components',],
+  },
   imports: {
     dirs: ['src/composables', 'src/stores']
   },
+  pages: true,
   css: ['@/presentation/assets/main.css'],
-})
+});
