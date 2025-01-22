@@ -13,7 +13,7 @@ module.exports = {
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 2024,
+    ecmaVersion: 2022,
     sourceType: 'module'
   },
   rules: {
@@ -22,5 +22,6 @@ module.exports = {
     'vue/max-attributes-per-line': ['error', { singleline: 3, multiline: 1 }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'nuxt/no-cjs-in-config': "off"
   }
 };
