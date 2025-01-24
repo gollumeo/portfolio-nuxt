@@ -1,10 +1,10 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 </script>
 
 <template>
   <div class="text-red-500">
-    coucou c moi
+    {{ $t('welcome') }}
   </div>
 </template>
 

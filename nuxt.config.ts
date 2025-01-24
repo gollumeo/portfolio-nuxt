@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     lazy: true,
     defaultLocale: 'fr',
     langDir: '../src/infrastructure/i18n/locales/',
-    strategy: 'prefix_except_default',
+    strategy: 'prefix',
     locales: [
       {
         code: 'en',
@@ -26,6 +26,12 @@ export default defineNuxtConfig({
         file: 'fr.ts',
       },
     ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: true,
+      redirectOn: 'root', // Redirige uniquement sur la homepage
+    },
   },
 
   pages: true,
