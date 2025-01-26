@@ -1,3 +1,3 @@
 export default {
-  welcome: 'Bienvenue!',
+  me: 'Pierre "Golluméo" Mauriello test',
 };
