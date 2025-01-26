@@ -1,7 +1,7 @@
 export type Url = string & { __brand: 'Url' }; // Branded Type pour éviter les strings bruts
 
 const VALID_URL_REGEX: RegExp = /^https:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const VALID_TLDS: string[] = ['com', 'org', 'net', 'fr', 'io', 'dev', 'be', 'uk', 'ca', 'co', 'ch'];
+export const VALID_TLDS: string[] = ['com', 'org', 'net', 'fr', 'io', 'dev', 'be', 'uk', 'ca', 'co', 'ch'];
 
 export const createUrl = (url: string): Url => {
   if (!url.startsWith('https://')) {
