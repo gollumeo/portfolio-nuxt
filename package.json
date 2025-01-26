@@ -24,6 +24,7 @@
     "node": ">=18.21.0"
   },
   "devDependencies": {
-    "eslint": "^9.18.0"
+    "eslint": "^9.18.0",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
