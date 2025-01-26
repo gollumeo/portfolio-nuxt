@@ -10,6 +10,10 @@
       "@/tests/*": [
         "tests/*"
       ]
-    }
+    },
+    "types": [
+      "@types/node",
+      "./types/nuxt-i18n"
+    ]
   }
 }
