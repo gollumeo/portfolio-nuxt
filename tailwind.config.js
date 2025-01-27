@@ -10,8 +10,8 @@ export default {
         sans: ['Montserrat Alternates', 'sans-serif'],
       },
       colors: {
-        primary: '#925e85',
-        secondary: '#bfadb5',
+        primary: '#bfadb5',
+        secondary: '#925e85',
         dark: '#191717',
         light: '#dae4ed',
       },
