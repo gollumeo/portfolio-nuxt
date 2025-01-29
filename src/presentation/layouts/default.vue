@@ -3,7 +3,7 @@
     <header class="p-4 bg-primary text-light">
       {{ $t('me') }}
     </header>
-    <main class="flex-grow">
+    <main class="grow">
       <slot />
     </main>
     <footer class="p-4 bg-primary text-light">
