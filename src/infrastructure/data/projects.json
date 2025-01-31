@@ -15,7 +15,10 @@
         "API",
         "REST",
         "Eloquent"
-      ]
+      ],
+      "image": null,
+      "github": null,
+      "demo": null
     }
   ]
 }
