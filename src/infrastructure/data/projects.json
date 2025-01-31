@@ -2,7 +2,20 @@
   "data": [
     {
       "id": 1,
-      "name": "test"
+      "name": "FinTrack",
+      "description": "An application which allows you to track all your finances throughout several entry points.",
+      "technos": [
+        "PHP",
+        "Laravel",
+        "PostgreSQL",
+        "SQL",
+        "Nuxt.js",
+        "Vue.js",
+        "TailwindCSS",
+        "API",
+        "REST",
+        "Eloquent"
+      ]
     }
   ]
 }
