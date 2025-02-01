@@ -1,4 +1,4 @@
-export type Url = string & { __brand: 'Url' }; // Branded Type pour éviter les strings bruts
+export type Url = string & { __brand: 'Url' };
 
 const VALID_URL_REGEX: RegExp = /^https:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const VALID_TLDS: string[] = ['com', 'org', 'net', 'fr', 'io', 'dev', 'be', 'uk', 'ca', 'co', 'ch'];
