@@ -1,17 +1,23 @@
 name: CD - Deploy to Coolify
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: [ "CI - Tests & linting" ]
+    types:
+      - completed
 
 jobs:
   deploy:
     name: Deploy to Coolify
     runs-on: ubuntu-latest
-    needs: test
 
     steps:
+      - name: Check if tests succeeded
+        if: github.event.workflow_run.conclusion != 'success'
+        run: |
+          echo "Tests failed, stopping deployment."
+          exit 1
+
       - name: Notify Coolify Deployment Webhook
         run: |
           curl -X POST ${{ secrets.COOLIFY_WEBHOOK }} -H "Content-Type: application/json" -d '{}'
