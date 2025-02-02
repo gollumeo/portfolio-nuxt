@@ -32,7 +32,7 @@ jobs:
       - name: Run Coverage
         run: npm run test:coverage || echo "Coverage check failed but not blocking"
 
-            - name: Notify Discord on Failure
+      - name: Notify Discord on Failure
         if: failure()
         run: |
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
@@ -65,7 +65,7 @@ jobs:
           }'
 
 
-            - name: Notify Discord on Success
+      - name: Notify Discord on Success
         if: success()
         run: |
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
