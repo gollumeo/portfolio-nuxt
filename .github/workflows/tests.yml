@@ -31,3 +31,73 @@ jobs:
 
       - name: Run Coverage
         run: npm run test:coverage || echo "Coverage check failed but not blocking"
+
+      - name: Notify Discord on Failure
+        if: failure()
+        run: |
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "embeds": [{
+              "title": "❌ CI FAILED!",
+              "description": "**Les tests ont échoué sur _portfolio-nuxt_** @here",
+              "color": 16711680,
+              "fields": [
+                {
+                  "name": "Commit",
+                  "value": "${{ github.event.head_commit.message }}",
+                  "inline": true
+                },
+                {
+                  "name": "Branch",
+                  "value": "${{ github.ref_name }}",
+                  "inline": true
+                },
+                {
+                  "name": "Logs",
+                  "value": "[Voir les logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+                }
+              ],
+              "footer": {
+                "text": "GitHub Actions - '"$TIMESTAMP"'"
+              }
+            }]
+          }'
+
+
+
+      - name: Notify Discord on Success
+        if: success()
+        run: |
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "embeds": [{
+              "title": "✅ CI SUCCESS!",
+              "description": "**Tous les tests sont passés sur _portfolio-nuxt_ 🎉** @here",
+              "color": 3066993,
+              "fields": [
+                {
+                  "name": "Commit",
+                  "value": "${{ github.event.head_commit.message }}",
+                  "inline": true
+                },
+                {
+                  "name": "Branch",
+                  "value": "${{ github.ref_name }}",
+                  "inline": true
+                },
+                {
+                  "name": "Logs",
+                  "value": "[Voir les logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+                }
+              ],
+              "footer": {
+                "text": "GitHub Actions - '"$TIMESTAMP"'"
+              }
+            }]
+          }'
+
+
