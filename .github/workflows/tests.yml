@@ -38,8 +38,9 @@ jobs:
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
           -H "Content-Type: application/json" \
           -d '{
+            "content": "@here 🚨"
             "embeds": [{
-              "title": "🚨 CI FAILED!",
+              "title": "❌ CI FAILED!",
               "description": "**Les tests ont échoué sur _portfolio-nuxt_** ❌",
               "color": 16711680,
               "fields": [
@@ -71,6 +72,7 @@ jobs:
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
           -H "Content-Type: application/json" \
           -d '{
+            "content": "@here 🎉"
             "embeds": [{
               "title": "✅ CI SUCCESS!",
               "description": "**Tous les tests sont passés sur _portfolio-nuxt_ 🎉**",
