@@ -1,12 +1,12 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: Montserrat Alternates, sans-serif;
+    --font-sans: Montserrat Alternates, sans-serif;
 
-  --color-primary: #bfadb5;
-  --color-secondary: #925e85;
-  --color-dark: #191717;
-  --color-light: #dae4ed;
+    --color-primary: #bfadb5;
+    --color-secondary: #925e85;
+    --color-dark: #191717;
+    --color-light: #dae4ed;
 }
 
 /*
@@ -18,13 +18,13 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
 }
 
 body {

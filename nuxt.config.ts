@@ -53,7 +53,10 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
 
-  css: ['/presentation/assets/main.css'],
+  css: [
+    '/presentation/assets/main.css',
+    '/presentation/assets/fonts.css',
+  ],
   dir: {
     pages: 'presentation/pages',
     layouts: 'presentation/layouts',
