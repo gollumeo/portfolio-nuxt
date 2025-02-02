@@ -1,11 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import tailwindcss from '@tailwindcss/vite';
+
+
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
   ],
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
 
   i18n: {
     lazy: true,
