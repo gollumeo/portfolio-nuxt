@@ -37,11 +37,11 @@ jobs:
         run: |
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
           -H "Content-Type: application/json" \
-          -d '{"content": "🚨 **CI FAILED!** Les tests ont échoué sur *portfolio-nuxt*. 🚨"}'
+          -d '{"content": "@here 🚨 **CI FAILED!** Les tests ont échoué sur *portfolio-nuxt*. 🚨"}'
 
       - name: Notify Discord on Success
         if: success()
         run: |
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
           -H "Content-Type: application/json" \
-          -d '{"content": "✅ **CI SUCCESS!** Tous les tests sont passés sur *portfolio-nuxt* 🎉."}'
+          -d '{"content": "@here ✅ **CI SUCCESS!** Tous les tests sont passés sur *portfolio-nuxt* 🎉."}'
