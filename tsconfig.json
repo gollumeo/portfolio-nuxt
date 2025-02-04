@@ -2,7 +2,7 @@
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -12,12 +12,25 @@
         "tests/*"
       ],
       "@/presentation/*": [
-        "src/presentation/*"
+        "src/presentation/*",
+        "src/presentation/*.vue"
       ]
     },
     "types": [
       "@types/node",
-      "@nuxtjs/i18n"
-    ]
-  }
+      "@nuxtjs/i18n",
+      "vite/client"
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "module": "ESNext"
+  },
+  "include": [
+    "**/*.vue",
+    "**/*.ts",
+    "**/*.js"
+  ]
 }
