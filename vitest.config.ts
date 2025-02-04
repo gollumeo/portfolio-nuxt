@@ -1,11 +1,17 @@
-/// <reference types="vitest" />
+import vue from '@vitejs/plugin-vue';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
+console.log('Testing vite-tsconfig-paths:', tsconfigPaths); // Debug
+
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  plugins: [tsconfigPaths(), vue()],
+  resolve: {
+    extensions: ['.vue', '.ts', '.js'],
+  },
   test: {
     globals: true,
-    environment: 'node',
+    environment: 'jsdom',
+    include: ['tests/**/*.spec.ts'],
   },
 });
