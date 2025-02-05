@@ -29,6 +29,7 @@
     "module": "ESNext"
   },
   "include": [
+    "vue-shim.d.ts",
     "**/*.vue",
     "**/*.ts",
     "**/*.js"
