@@ -1,12 +1,11 @@
-import BaseButton from '@/presentation/components/atoms/BaseButton';
-import type { VueWrapper } from '@vue/test-utils';
+import BaseButton from '@/presentation/components/atoms/BaseButton.vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it, vi } from 'vitest';
 
 
 describe('BaseButton', () => {
   it('should have a "label" prop', () => {
-    const wrapper: VueWrapper = mount(BaseButton, {
+    const wrapper = mount(BaseButton, {
       props: { label: '' },
     });
 
@@ -14,9 +13,11 @@ describe('BaseButton', () => {
   });
 
   it('should return a default value', () => {
-    const wrapper = mount(BaseButton, {});
+    const wrapper = mount(BaseButton);
 
-    expect(wrapper.props().label).toBe('');
+    // Explicitly type the props
+    const props: { label: string } = wrapper.props();
+    expect(props.label).toBe('');
   });
 
   it('should fail if "label" is not a string', () => {
@@ -24,7 +25,6 @@ describe('BaseButton', () => {
     });
 
     mount(BaseButton, {
-      // @ts-expect-error - We do test, on purpose, a wrong value
       props: { label: 123 },
     });
     expect(consoleWarnSpy).toHaveBeenCalled();

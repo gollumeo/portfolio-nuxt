@@ -1,12 +1,14 @@
 <script lang="ts" setup>
-defineProps({
-  label: {
-    type: String,
-    default: '',
-  },
+import type { BaseButtonProps } from '@/presentation/components/atoms/types/BaseButtonProps';
+
+const props = withDefaults(defineProps<BaseButtonProps>(), {
+  label: '',
 });
+
 </script>
 
 <template>
-  <div/>
+  <div>
+    {{ props.label }}
+  </div>
 </template>
