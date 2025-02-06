@@ -27,4 +27,13 @@ describe('BaseButton', () => {
     });
     expect(consoleWarnSpy).toHaveBeenCalled();
   });
+
+  it('should render the label', () => {
+    const label = 'Click me';
+    const wrapper = mount(BaseButton, {
+      props: { label },
+    });
+
+    expect(wrapper.text()).toBe(label);
+  });
 });
