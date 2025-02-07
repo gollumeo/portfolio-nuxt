@@ -36,4 +36,9 @@ describe('BaseButton', () => {
 
     expect(wrapper.text()).toBe(label);
   });
+
+  it('should be an html button', () => {
+    const wrapper = mount(BaseButton);
+    expect(wrapper.element.tagName).toBe('BUTTON');
+  });
 });
