@@ -14,7 +14,7 @@ describe('BaseButton', () => {
   it('should return a default value', () => {
     const wrapper = mount(BaseButton);
 
-    const props: { label: string } = wrapper.props();
+    const props = wrapper.props() as { label?: string };
     expect(props.label).toBe('');
   });
 
