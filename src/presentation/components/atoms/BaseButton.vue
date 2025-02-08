@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
 </script>
 
 <template>
-  <div>
+  <button>
     {{ props.label }}
-  </div>
+  </button>
 </template>
