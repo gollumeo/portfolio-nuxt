@@ -11,7 +11,7 @@ describe('BaseButton', () => {
     expect(wrapper.props()).toHaveProperty('label');
   });
 
-  it('should return a default value', () => {
+  it('"label" should return a default value', () => {
     const wrapper = mount(BaseButton);
 
     const props = wrapper.props() as { label?: string };
@@ -40,5 +40,9 @@ describe('BaseButton', () => {
   it('should be an html button', () => {
     const wrapper = mount(BaseButton);
     expect(wrapper.element.tagName).toBe('BUTTON');
+  });
+
+  it('should have a "disabled" prop', () => {
+
   });
 });
