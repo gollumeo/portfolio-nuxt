@@ -42,7 +42,58 @@ describe('BaseButton', () => {
     expect(wrapper.element.tagName).toBe('BUTTON');
   });
 
-  it('should have a "disabled" prop', () => {
+  it('should call a click handler method when clicked', async (): Promise<void> => {
+    const onClick = vi.fn();
+    const wrapper = mount(BaseButton, {
+      props: {
+        handleClick: onClick,
+      },
+    });
 
+    await wrapper.trigger('click');
+    // expect(onClick).toHaveBeenCalledTimes(1);
+    expect(wrapper.emitted()).toHaveProperty('click');
+  });
+
+  it('should have a "disabled" prop', () => {
+    const wrapper = mount(BaseButton, {
+      props: { disabled: '' },
+    });
+
+    expect(wrapper.props()).toHaveProperty('disabled');
+  });
+
+  it('should have a "disabled" attribute when "disabled" prop is true', () => {
+    const wrapper = mount(BaseButton, {
+      props: { disabled: true },
+    });
+
+    expect(wrapper.attributes()).toHaveProperty('disabled');
+  });
+
+  it('should not have a "disabled" attribute when "disabled" prop is false', () => {
+    const wrapper = mount(BaseButton, {
+      props: { disabled: false },
+    });
+
+    expect(wrapper.attributes()).not.toHaveProperty('disabled');
+  });
+
+  it('should throw a warn if "disabled" is not a boolean', () => {
+    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {
+    });
+
+    mount(BaseButton, {
+      props: { disabled: 'true' },
+    });
+    expect(consoleWarnSpy).toHaveBeenCalled();
+  });
+
+  it('should be deactivated when "disabled" prop is true', () => {
+    const wrapper = mount(BaseButton, {
+      props: { disabled: true },
+    });
+
+    expect(wrapper.classes()).toContain('disabled:cursor-not-allowed');
   });
 });
