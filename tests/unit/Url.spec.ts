@@ -11,5 +11,6 @@ describe.each(urlsTestData.validUrls)('Valid URLs', (validUrl: string): void => 
 describe.each(urlsTestData.invalidUrls)('Invalid URLs', ({ url, expectedError }): void => {
   it(`should throw error for ${url}`, () => {
     expect(() => createUrl(url)).toThrowError(expectedError);
+    
   });
 });
