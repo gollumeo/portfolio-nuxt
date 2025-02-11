@@ -51,7 +51,6 @@ describe('BaseButton', () => {
     });
 
     await wrapper.trigger('click');
-    // expect(onClick).toHaveBeenCalledTimes(1);
     expect(wrapper.emitted()).toHaveProperty('click');
   });
 
