@@ -95,4 +95,7 @@ describe('BaseButton', () => {
 
     expect(wrapper.classes()).toContain('disabled:cursor-not-allowed');
   });
+
+  it('', () => {
+  });
 });
