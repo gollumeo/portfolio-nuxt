@@ -4,7 +4,7 @@ import type { BaseButtonProps } from '@/presentation/components/atoms/types/Base
 const props = withDefaults(defineProps<BaseButtonProps>(), {
   label: '',
   disabled: false,
-  handleClick: () => {
+  clickHandler: () => {
   },
 });
 
@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
   <button
     :disabled="props.disabled"
     class="disabled:cursor-not-allowed"
-    @click="props.handleClick">
+    @click="props.clickHandler()">
     {{ props.label }}
   </button>
 </template>
