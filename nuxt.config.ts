@@ -55,8 +55,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   css: [
-    '/presentation/assets/main.css',
-    '/presentation/assets/fonts.css',
+    '/presentation/assets/main.scss',
+    '/presentation/assets/fonts.scss',
   ],
   dir: {
     pages: 'presentation/pages',
