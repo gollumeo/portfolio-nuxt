@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col text-slate-100">
-    <header class="p-4 bg-primary text-light">
+    <header class="p-4 bg-dark text-light">
       {{ $t('me') }}
     </header>
     <main class="grow">

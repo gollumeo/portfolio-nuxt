@@ -14,6 +14,13 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "_fonts.scss" as *;',
+        },
+      },
+    },
   },
 
   i18n: {
@@ -39,7 +46,7 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: 'i18n_redirected',
       alwaysRedirect: true,
-      redirectOn: 'root', // Redirige uniquement sur la homepage
+      redirectOn: 'root',
     },
   },
 
@@ -56,8 +63,12 @@ export default defineNuxtConfig({
 
   css: [
     '/presentation/assets/main.scss',
-    '/presentation/assets/fonts.scss',
   ],
+  postcss: {
+    plugins: {
+      '@tailwindcss/postcss': {},
+    },
+  },
   dir: {
     pages: 'presentation/pages',
     layouts: 'presentation/layouts',
