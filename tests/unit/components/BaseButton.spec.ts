@@ -95,4 +95,23 @@ describe('BaseButton', () => {
 
     expect(wrapper.classes()).toContain('disabled:cursor-not-allowed');
   });
+
+  it('should render an empty slot by default', () => {
+    const wrapper = mount(BaseButton);
+
+    expect(wrapper.html()).not.toContain('<div>');
+    expect(wrapper.html()).not.toContain('a string');
+    expect(wrapper.text()).toBe('');
+  });
+
+  it('should render a given slot', () => {
+    const slot: string = '<img src="sample.png" alt="sample">';
+    const wrapper = mount(BaseButton, {
+      slots: {
+        default: slot,
+      },
+    });
+
+    expect(wrapper.html()).toContain(slot);
+  });
 });

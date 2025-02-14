@@ -15,6 +15,7 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
     :disabled="props.disabled"
     class="disabled:cursor-not-allowed"
     @click="props.clickHandler()">
+    <slot/>
     {{ props.label }}
   </button>
 </template>
