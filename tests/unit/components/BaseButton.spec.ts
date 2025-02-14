@@ -105,7 +105,7 @@ describe('BaseButton', () => {
   });
 
   it('should render a given slot', () => {
-    const slot: string = '<img src="sample.png" alt="sample">';
+    const slot: string = '<img src="" alt="sample">';
     const wrapper = mount(BaseButton, {
       slots: {
         default: slot,
