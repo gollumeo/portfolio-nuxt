@@ -6,16 +6,17 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
   disabled: false,
   clickHandler: () => {
   },
+  variant: 'info',
 });
-
 </script>
 
 <template>
   <button
+    :class="'disabled:cursor-not-allowed ' + variant"
     :disabled="props.disabled"
-    class="disabled:cursor-not-allowed"
-    @click="props.clickHandler()">
-    <slot/>
+    @click="props.clickHandler()"
+  >
+    <slot />
     {{ props.label }}
   </button>
 </template>

@@ -114,4 +114,23 @@ describe('BaseButton', () => {
 
     expect(wrapper.html()).toContain(slot);
   });
+
+  it('should have a "variant" prop', () => {
+    const wrapper = mount(BaseButton, {
+      props: { variant: 'test' },
+    });
+
+    expect(wrapper.props()).toHaveProperty('variant');
+  });
+
+  it('should fail if an invalid "variant" is given', () => {
+    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {
+    });
+
+    mount(BaseButton, {
+      props: { variant: 'invalid' },
+    });
+
+    expect(consoleWarnSpy).toHaveBeenCalled();
+  });
 });
