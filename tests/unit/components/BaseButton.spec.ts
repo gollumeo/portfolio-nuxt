@@ -145,4 +145,8 @@ describe('BaseButton', (): void => {
 
     expect(props.variant).toContain('info');
   });
+
+  it('should have a default set of classes when there is no "variant" specified', (): void => {
+    
+  });
 });
