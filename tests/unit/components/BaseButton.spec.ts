@@ -147,6 +147,10 @@ describe('BaseButton', (): void => {
   });
 
   it('should have a default set of classes when there is no "variant" specified', (): void => {
-    
+    const wrapper: VueWrapper = mount(BaseButton);
+    const props: { variant?: BaseButtonVariant } = wrapper.props();
+
+    expect(props.variant).toContain('info');
+    expect(wrapper.classes()).toContain('btn');
   });
 });
