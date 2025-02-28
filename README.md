@@ -1,75 +1,67 @@
-# Nuxt Minimal Starter
+# Portfolio—Nuxt
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+*A structured and test-driven portoflio built with Nuxt.js & TypeScript*
 
-## Setup
+## 📌 Overview
 
-Make sure to install dependencies:
+This project is my personal portfolio, developed with **Nuxt.js**, structured following **Domain-Driven Design (DDD)** and **Clean Architecture** principles.
+Although it is not intended to be installed and run by others, this repository showcases my **ability to design scalable, maintainable, and testable frontend applications**. 
 
-```bash
-# npm
-npm install
+## 🛠️ Why Nuxt.js?
 
-# pnpm
-pnpm install
+I chose **Nuxt.js** for its versatility, performance optimizations, and clean separation of concerns (and also because I've always enjoyed Vue.js, prior to this discovery).<br/>
+✅ **Static & SSR capabilities** -> ensures SEO optimization while keeping flexibility for dynamic content.<br>
+✅ **File-based routing** -> simplifies navigation management.<br>
+✅ **Built-in TypeScript & Composition API support** -> helps maintain code quality & scalability.<br>
+✅ **First-class `i18n` support** -> easy and smooth multilingual experience. 
 
-# yarn
-yarn install
+## 🏗️ Architecture & design decisions
 
-# bun
-bun install
-```
+This portfolio follows a **modular and layered architecture** to ensure **scalability, testability, and maintainability**. 
 
-## Development Server
+### 🧩 Domain-Driven Design (DDD) & Clean Architecture
 
-Start the development server on `http://localhost:3000`:
+The project is structured into clearly defined **layers**: 
+- `domain/` -> **business** logic and **Type** definitions,
+  - Houses **Value Objects**, **Types**, and **Core Entities** related the project domain,
+  - Example: `Project.ts` encapsulates the core logic and properties of a **project**.
+- `application/` -> **application** logic & **orchestrators**,
+  - Contains **data sources** (e.g., JSON files simulating APIs) and localization files for `i18n`.
+- `presentation/` -> UI Layer (Nuxt **components**, **pages**, and **UI elements**)
+  - follows an **Atomic Design** pattern: 
+    - **Atoms**: smallest UI components (`BaseButton.vue`),
+    - **Molecules**: groups of atoms with minor logic,
+    - **Organisms**: complex components containing multiple molecules. 
+  - uses **Composition API** for modular and reusable component logic.
 
-```bash
-# npm
-npm run dev
+### 🛡️ Test-Driven Development (TDD)
 
-# pnpm
-pnpm dev
+The entire project is developed using **TDD principles**, ensuring:<br>
+✅ **Reliable** & **bug-resistant** components with thorough unit testing.<br>
+✅ **Maintainability** by catching regressions early.<br>
+✅ **Code quality improvements** via **test-first** development.
 
-# yarn
-yarn dev
+### ⚡ Custom test utilities & Builders
 
-# bun
-bun run dev
-```
+To streamline testing, I implemented *(for now)* a builder pattern to **generate** test data **efficiently**. 
+Example: 
+- `BaseButtonWrapper.builder.ts` -> creates wrapper instances for UI tests (using `@vue/test-utils`),
+- `testData.ts` -> provides reusable **mocked** test cases for consistency. 
 
-## Production
+## 🧙‍♂️ Future enhancements
 
-Build the application for production:
+Although the core architecture is in place, I plan to:
+- [ ] implement **SSG/SSR** hybrid rendering for optimized performance,
+- [ ] add **project showcase** management via an **admin panel**,
+- [ ] introduce **advanced animations & transitions** to improve user engagement.
 
-```bash
-# npm
-npm run build
+## 📜 License
 
-# pnpm
-pnpm build
+This project is **not** intended for external use, but serves as a demonstration of my **frontend architecture skills**. 
 
-# yarn
-yarn build
+## Want to connect?
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Feel free to:
+- reach out via [LinkedIn](https://linkedin.com/in/pierre-mauriello),
+- book a meeting on my [calendly](https://calendly.com/hire-me-pierre-mauriello)
+- check my other projects on [GitHub](https://github.com/gollumeo?tab=repositories)

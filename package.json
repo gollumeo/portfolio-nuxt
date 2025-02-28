@@ -7,13 +7,37 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:unit": "vitest --config vitest.config.ts",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.13.1",
-    "@pinia/nuxt": "^0.9.0",
+    "@nuxt/eslint": "^0.7.5",
+    "@tailwindcss/postcss": "^4.0.6",
+    "@tailwindcss/vite": "^4.0.3",
     "nuxt": "^3.15.2",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.0.6",
+    "vitest": "latest",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "engines": {
+    "node": ">=18.21.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^9.1.4",
+    "@testing-library/vue": "^8.1.0",
+    "@vitest/coverage-v8": "^3.0.4",
+    "eslint": "^9.18.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "jsdom": "^26.0.0",
+    "sass-embedded": "^1.85.0",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

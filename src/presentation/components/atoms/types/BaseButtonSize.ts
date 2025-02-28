@@ -1,0 +1,1 @@
+export type BaseButtonSize = 'sm' | 'regular' | 'lg'

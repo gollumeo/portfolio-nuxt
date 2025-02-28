@@ -1,0 +1,1 @@
+export type BaseButtonVariant = 'validate' | 'danger' | 'warning' | 'info' | 'sm'

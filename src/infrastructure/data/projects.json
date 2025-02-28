@@ -1,0 +1,258 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": {
+        "fr": "Chirper",
+        "en": "Chirper"
+      },
+      "description": {
+        "fr": "Clone de Twitter minimaliste.",
+        "en": "Minimalist Twitter clone."
+      },
+      "technos": [
+        "Laravel",
+        "Vue.js",
+        "TailwindCSS"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/chirper",
+      "demo": null
+    },
+    {
+      "id": 2,
+      "title": {
+        "fr": "La Licorne Verte",
+        "en": "La Licorne Verte"
+      },
+      "description": {
+        "fr": "Plateforme e-commerce éco-responsable.",
+        "en": "Eco-friendly e-commerce platform."
+      },
+      "technos": [
+        "Laravel",
+        "Livewire",
+        "JavaScript",
+        "TailwindCSS"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/licorneverte",
+      "demo": "https://licorneverte.pierre-mauriello.be/"
+    },
+    {
+      "id": 3,
+      "title": {
+        "fr": "AresCreative",
+        "en": "AresCreative"
+      },
+      "description": {
+        "fr": "Site de gestion de projets créatifs.",
+        "en": "Creative project management site."
+      },
+      "technos": [
+        "PHP",
+        "CSS",
+        "MySQL",
+        "Stripe"
+      ],
+      "image": null,
+      "github": null,
+      "demo": "https://arescreative.fr/"
+    },
+    {
+      "id": 4,
+      "title": {
+        "fr": "AresChat",
+        "en": "AresChat"
+      },
+      "description": {
+        "fr": "Chat sécurisé utilisant AI et Stripe.",
+        "en": "Secure chat app with AI and Stripe."
+      },
+      "technos": [
+        "TypeScript",
+        "Svelte",
+        "TailwindCSS",
+        "Node.js",
+        "Stripe",
+        "HuggingFace"
+      ],
+      "image": null,
+      "github": null,
+      "demo": "https://www.openares.net/"
+    },
+    {
+      "id": 5,
+      "title": {
+        "fr": "Personal LLMs Fine Tuning",
+        "en": "Personal LLMs Fine Tuning"
+      },
+      "description": {
+        "fr": "Affinage de modèles LLM personnels.",
+        "en": "Personal LLM fine-tuning."
+      },
+      "technos": [
+        "Python",
+        "Machine Learning",
+        "PEFT",
+        "QLoRA",
+        "Rope Scaling"
+      ],
+      "image": null,
+      "github": "https://huggingface.co/gollumeo",
+      "demo": null
+    },
+    {
+      "id": 6,
+      "title": {
+        "fr": "Faraday LLMs Fine Tuning",
+        "en": "Faraday LLMs Fine Tuning"
+      },
+      "description": {
+        "fr": "Affinage de modèles LLM pour Faraday.",
+        "en": "LLM fine-tuning for Faraday."
+      },
+      "technos": [
+        "Python",
+        "Machine Learning",
+        "PEFT",
+        "QLoRA",
+        "Rope Scaling"
+      ],
+      "image": null,
+      "github": "https://huggingface.co/Faradaylab",
+      "demo": null
+    },
+    {
+      "id": 7,
+      "title": {
+        "fr": "Golluméweather",
+        "en": "Golluméweather"
+      },
+      "description": {
+        "fr": "Application météo simple et rapide.",
+        "en": "Simple and fast weather app."
+      },
+      "technos": [
+        "JavaScript",
+        "CSS"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/weather-app",
+      "demo": "https://gollumeo.github.io/weather-app/"
+    },
+    {
+      "id": 8,
+      "title": {
+        "fr": "PHP Machine Learning",
+        "en": "PHP Machine Learning"
+      },
+      "description": {
+        "fr": "Expérimentations ML avec PHP.",
+        "en": "ML experiments with PHP."
+      },
+      "technos": [
+        "PHP",
+        "Laravel",
+        "Machine Learning"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/php-machine-learning",
+      "demo": null
+    },
+    {
+      "id": 9,
+      "title": {
+        "fr": "Cogip (Client)",
+        "en": "Cogip (Client)"
+      },
+      "description": {
+        "fr": "Client pour la gestion de factures.",
+        "en": "Client app for invoice management."
+      },
+      "technos": [
+        "React",
+        "JavaScript",
+        "SCSS"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/cogip/tree/main/front",
+      "demo": null
+    },
+    {
+      "id": 10,
+      "title": {
+        "fr": "Cogip (API)",
+        "en": "Cogip (API)"
+      },
+      "description": {
+        "fr": "API backend pour la gestion de factures.",
+        "en": "Backend API for invoice management."
+      },
+      "technos": [
+        "PHP",
+        "API",
+        "REST",
+        "Model-Controller Pattern",
+        "POO"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/cogip/tree/back",
+      "demo": null
+    },
+    {
+      "id": 11,
+      "title": {
+        "fr": "[AZ]Store",
+        "en": "[AZ]Store"
+      },
+      "description": {
+        "fr": "Marketplace en ligne.",
+        "en": "Online marketplace."
+      },
+      "technos": [
+        "PHP",
+        "TailwindCSS"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/az_store",
+      "demo": "http://azstore.free.nf/?i=1"
+    },
+    {
+      "id": 12,
+      "title": {
+        "fr": "Golluméquotes",
+        "en": "Golluméquotes"
+      },
+      "description": {
+        "fr": "Générateur de citations aléatoires.",
+        "en": "Random quote generator."
+      },
+      "technos": [
+        "JavaScript",
+        "SCSS"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/random-quote-using-async-await",
+      "demo": "https://gollumeo.github.io/random-quote-using-async-await/"
+    },
+    {
+      "id": 13,
+      "title": {
+        "fr": "The Collection",
+        "en": "The Collection"
+      },
+      "description": {
+        "fr": "Application de gestion de collections.",
+        "en": "Collection management app."
+      },
+      "technos": [
+        "JavaScript",
+        "SCSS"
+      ],
+      "image": null,
+      "github": "https://github.com/gollumeo/the-collection",
+      "demo": "https://gollumeo.github.io/the-collection/"
+    }
+  ]
+}
