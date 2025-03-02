@@ -6,7 +6,7 @@ import { mount, type VueWrapper } from '@vue/test-utils';
 
 type BuilderState = Partial<BaseButtonProps>;
 
-interface BaseButtonBuilder {
+export interface BaseButtonBuilder {
   withVariant: (variant: BaseButtonVariant) => BaseButtonBuilder;
   withSize: (size: BaseButtonSize) => BaseButtonBuilder;
   withLabel: (label: string) => BaseButtonBuilder;

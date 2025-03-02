@@ -1,7 +1,7 @@
 import BaseButton from '@/presentation/components/atoms/BaseButton.vue';
 import type { BaseButtonProps } from '@/presentation/components/atoms/types/BaseButtonProps';
 import type { BaseButtonVariant } from '@/presentation/components/atoms/types/BaseButtonVariant';
-import { BaseButtonWrapperBuilder } from '@/tests/unit/components/BaseButtonWrapper.builder';
+import { type BaseButtonBuilder, BaseButtonWrapperBuilder } from '@/tests/unit/components/BaseButtonWrapper.builder';
 import { config, mount, type VueWrapper } from '@vue/test-utils';
 import { describe, expect, it, type Mock, vi } from 'vitest';
 
@@ -9,13 +9,11 @@ config.global.config.warnHandler = (msg: string): never => {
   throw new Error(msg);
 };
 
-const builder = BaseButtonWrapperBuilder();
+const builder: BaseButtonBuilder = BaseButtonWrapperBuilder();
 
 describe('BaseButton', (): void => {
   it('should have a "label" prop', (): void => {
-    const wrapper: VueWrapper = mount(BaseButton, {
-      props: { label: '' },
-    });
+    const wrapper: VueWrapper = builder.withLabel('').build();
 
     expect(wrapper.props()).toHaveProperty('label');
   });
