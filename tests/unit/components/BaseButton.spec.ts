@@ -13,7 +13,9 @@ const builder: BaseButtonBuilder = BaseButtonWrapperBuilder();
 
 describe('BaseButton', (): void => {
   it('should have a "label" prop', (): void => {
-    const wrapper: VueWrapper = builder.withLabel('').build();
+    const wrapper: VueWrapper = builder
+      .withLabel('')
+      .build();
 
     expect(wrapper.props()).toHaveProperty('label');
   });
