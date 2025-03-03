@@ -21,7 +21,7 @@ describe('BaseButton', (): void => {
   });
 
   it('"label" should return a default value', (): void => {
-    const wrapper: VueWrapper = mount(BaseButton);
+    const wrapper: VueWrapper = builder.build();
 
     const props: { label?: string } = wrapper.props();
     expect(props.label).toBe('');
