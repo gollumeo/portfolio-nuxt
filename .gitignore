@@ -1,0 +1,6 @@
+.idea/
+.nuxt/
+node_modules/
+package-lock.json
+.github/workflows/notifyDiscord.yml
+.github/workflows/tests.yml

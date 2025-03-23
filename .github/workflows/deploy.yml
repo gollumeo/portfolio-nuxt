@@ -1,0 +1,19 @@
+name: CD - Deploy to Coolify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Coolify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Notify Coolify Deployment Webhook
+        run: |
+          curl -X POST "${{ secrets.COOLIFY_WEBHOOK }}" \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}" \
+          -d '{}'

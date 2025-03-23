@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+    --font-sans: Montserrat Alternates, sans-serif;
+
+    --color-primary: #bfadb5;
+    --color-secondary: #925e85;
+    --color-dark: #191717;
+    --color-light: #dae4ed;
+}

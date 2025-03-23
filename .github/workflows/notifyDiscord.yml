@@ -1,0 +1,48 @@
+name: Notify Discord
+
+on:
+  workflow_run:
+    workflows: [ "CI - Tests & linting" ]
+    types:
+      - completed
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get workflow run details
+        run: |
+          echo "STATUS=${{ github.event.workflow_run.conclusion }}" >> $GITHUB_ENV
+          echo "BRANCH=${{ github.event.workflow_run.head_branch }}" >> $GITHUB_ENV
+          COMMIT_MSG=$(echo "${{ github.event.workflow_run.head_commit.message }}" | tr -d '"' | sed ':a;N;$!ba;s/\n/ /g')
+          echo "COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_ENV
+
+
+      - name: Notify Discord
+        run: |
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          JSON_PAYLOAD=$(jq -n \
+            --arg title "$(if [ "$STATUS" == "success" ]; then echo "✅ CI SUCCESS!"; else echo "❌ CI FAILED!"; fi)" \
+            --arg desc "$(if [ "$STATUS" == "success" ]; then echo "**All tests passed on _${{ github.event.repository.name }}_ 🎉** @here"; else echo "**Tests failed on _${{ github.event.repository.name }}_** @here"; fi)" \
+            --argjson color "$(if [ "$STATUS" == "success" ]; then echo "3066993"; else echo "16711680"; fi)" \
+            --arg commit_msg "$COMMIT_MSG" \
+            --arg branch "$BRANCH" \
+            --arg logs "[See logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }})" \
+            --arg timestamp "$TIMESTAMP" \
+            '{
+              "embeds": [{
+                "title": $title,
+                "description": $desc,
+                "color": $color,
+                "fields": [
+                  { "name": "Commit", "value": $commit_msg, "inline": true },
+                  { "name": "Branch", "value": $branch, "inline": true },
+                  { "name": "Logs", "value": $logs }
+                ],
+                "footer": { "text": ("GitHub Actions - " + $timestamp) }
+              }]
+            }')
+          
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
+          -H "Content-Type: application/json" \
+          -d "$JSON_PAYLOAD"
