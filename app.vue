@@ -44,6 +44,9 @@
             <UButton class="mt-2" target="_blank" to="https://github.com/gollumeo/laravel-open-banking">
               Voir sur GitHub
             </UButton>
+            <template #footer>
+              Badges à venir
+            </template>
           </UCard>
         </article>
       </section>
