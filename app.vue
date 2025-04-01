@@ -45,7 +45,7 @@
               Voir sur GitHub
             </UButton>
             <template #footer>
-              Badges à venir
+              Badges à venir.
             </template>
           </UCard>
         </article>
