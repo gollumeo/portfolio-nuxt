@@ -5,9 +5,9 @@ import {Alert, AlertDescription, AlertTitle} from "~/nuxt/components/ui/alert";
 </script>
 
 <template>
-  <header class="w-3/4 m-auto">
-    <Alert class="bg-gollumeo-secondary">
-      <TriangleAlert class="text-gollumeo-light" />
+  <header class="md:w-3/4 m-auto">
+    <Alert class="bg-gollumeo-secondary border-none">
+      <TriangleAlert class="text-gollumeo-light stroke-gollumeo-light" />
       <AlertTitle class="text-gollumeo-light">
         WIP
       </AlertTitle>
