@@ -11,8 +11,13 @@
     --color-gollumeo-light: #dae4ed;
 }
 
+html,
+#__nuxt {
+    @apply h-full w-full m-0 p-0;
+}
+
 body {
-    @apply bg-gollumeo-dark text-gollumeo-light p-4;
+    @apply bg-gollumeo-dark text-gollumeo-light h-full;
 }
 
 :root {

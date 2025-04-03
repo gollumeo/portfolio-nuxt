@@ -4,6 +4,8 @@ import Main from "~/nuxt/components/base/Main.vue";
 </script>
 
 <template>
-  <Header />
-  <Main />
+  <div class="p-4 min-h-screen flex flex-col gap-4">
+    <Header />
+    <Main />
+  </div>
 </template>
