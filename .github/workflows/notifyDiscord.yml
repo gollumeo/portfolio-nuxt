@@ -2,7 +2,7 @@ name: Notify Discord
 
 on:
   workflow_run:
-    workflows: [ "CI - Tests & linting" ]
+    workflows: [ "CI" ]
     types:
       - completed
 
