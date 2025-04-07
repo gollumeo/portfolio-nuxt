@@ -9,6 +9,9 @@
     --color-gollumeo-secondary: #925e85;
     --color-gollumeo-dark: #191717;
     --color-gollumeo-light: #dae4ed;
+    --color-gollumeo-gold: #c28840;
+    --color-gollumeo-gold-hover: #dfa86c;
+    --color-gollumeo-transition-deep: #3e2e38;
 }
 
 html,
