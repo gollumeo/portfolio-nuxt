@@ -5,7 +5,7 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "~/nu
 
 <template>
   <section class="rounded-lg px-4 py-2 md:col-span-2 bg-gollumeo-secondary flex flex-col gap-4">
-    <h2 class="text-xl md:text-3xl font-bold mt-2">Quel feu brûle en moi</h2>
+    <h2 class="text-xl md:text-3xl font-bold mt-2">Ce feu qui brûle en moi...</h2>
     <Accordion collapsible type="single">
       <AccordionItem class="bg-gollumeo-primary text-gollumeo-dark rounded-lg px-4 mt-2" value="qui je suis">
         <AccordionTrigger
