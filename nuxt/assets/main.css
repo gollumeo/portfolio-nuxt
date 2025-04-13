@@ -9,6 +9,10 @@
     --color-gollumeo-secondary: #925e85;
     --color-gollumeo-dark: #191717;
     --color-gollumeo-light: #dae4ed;
+    --color-gollumeo-plum: #6e4b61;         /* feu intérieur / montée en tension */
+    --color-gollumeo-berry: #925e85;        /* émotion brute / vibe signature */
+    --color-gollumeo-copper: #a36c4e;       /* transition douce vers le gold */
+    --color-gollumeo-bronze: #b17e55;
     --color-gollumeo-gold: #c28840;
     --color-gollumeo-gold-hover: #dfa86c;
     --color-gollumeo-transition-deep: #3e2e38;
@@ -20,7 +24,7 @@ html,
 }
 
 body {
-    @apply bg-gollumeo-dark text-gollumeo-light h-full;
+    @apply bg-gradient-to-br to-gollumeo-dark from-gollumeo-transition-deep text-gollumeo-light h-full;
 }
 
 :root {
